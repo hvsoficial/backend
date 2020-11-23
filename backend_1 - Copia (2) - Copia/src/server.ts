@@ -15,4 +15,4 @@ app.use(routes)
 app.use('/uploads', express.static(join(__dirname, '..', 'uploads')))
 app.use(errorHandler)
 
-app.listen(3338)
+app.listen(process.env.PORT ||3338)
