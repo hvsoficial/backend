@@ -31,8 +31,8 @@ export default {
 			open_on_weekends: Yup.boolean().required('O campo "open_on_weekends" é obrigatório.'),
 			images: Yup.array(
 				Yup.object().shape({
-					path: Yup.string().required('O campo "path" é obrigatório.')
-				}))
+					path: Yup.string()
+				})).required('O campo "Images" é obrigatório.')
 		})
 
 		await schema.validate(data, { abortEarly: false })
